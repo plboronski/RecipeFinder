@@ -1,0 +1,21 @@
+.vl {
+    border-left: 1px solid black;
+    height: 1px;
+    display: inline;
+  }
+
+.nav-bar {
+    margin: 0.3%;
+}
+
+span > button {
+  margin: 0% 0.3% 0% 0.3%;
+  color: whitesmoke;
+}
+
+.nav-background {
+  height: 2.7em;
+  background-color: rgb(159, 159, 184);
+}
+
+
