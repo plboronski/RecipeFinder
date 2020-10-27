@@ -1,0 +1,16 @@
+<form>
+    <label for="name">Enter the name of the recipe: </label>
+    <input name="nameInput" type="text" [(ngModel)]="recipeName" placeholder="Ex: Baguette">
+    <br>
+    <label for="description">Describe the dish: </label>
+    <input type="number" name="prepTime" [(ngModel)]="prepTime" min="0">
+
+    <label for="prepTime">Enter the prep time in minutes</label>
+    <input type="text" name="descriptionInput" [(ngModel)]="description" placeholder="Ex: French Bread">
+    <div *ngFor="let s of steps">
+        <label for="steps">Step {{s}}:</label>
+        <input type="text" name="step s">
+    </div>
+    <button class="btn btn-light" (click)="addStep()">Add a step</button>
+    <button class="btn btn-danger" (click)="removeStep()">Remove most recent step</button>
+</form>
