@@ -1,16 +1,30 @@
-<form>
-    <label for="name">Enter the name of the recipe: </label>
-    <input name="nameInput" type="text" [(ngModel)]="recipeName" placeholder="Ex: Baguette">
-    <br>
-    <label for="description">Describe the dish: </label>
-    <input type="number" name="prepTime" [(ngModel)]="prepTime" min="0">
+<div class="row">
+    <form>
+        <div class="card">
+            <div id="stepCard" class="card-body">
+                <div class="head">Recipe info</div>
+                <label for="name">Name</label>
+                <input name="nameInput" type="text" [(ngModel)]="recipeName" placeholder="Baguette">
+                <br>
+                <label for="prepTime">Prep time in minutes</label>
+                <input type="number" name="prepTime" [(ngModel)]="prepTime" min="0">
+                <br>
+                <label for="description">Describe the dish</label>
+                <input type="text" name="descriptionInput" [(ngModel)]="description" placeholder="French Bread">
+            </div>
+        </div>
+        <div class="card">
 
-    <label for="prepTime">Enter the prep time in minutes</label>
-    <input type="text" name="descriptionInput" [(ngModel)]="description" placeholder="Ex: French Bread">
-    <div *ngFor="let s of steps">
-        <label for="steps">Step {{s}}:</label>
-        <input type="text" name="step s">
-    </div>
-    <button class="btn btn-light" (click)="addStep()">Add a step</button>
-    <button class="btn btn-danger" (click)="removeStep()">Remove most recent step</button>
-</form>
+            <div id="stepCard" class="card-body">
+                <div class="head">Recipe steps</div>
+                <div *ngFor="let s of steps">
+                    <label for="steps">Step {{s}}</label>
+                    <input type="text" name="step s" placeholder="slap some salt on it">
+                </div>
+                <button class="btn btn-light" (click)="addStep()" style="width:100%;text-align:center">Add a step</button>
+                <button class="btn btn-danger" (click)="removeStep()">Remove most recent step</button>
+            </div>
+        </div>
+        <button id="submitBtn" type="submit" class="btn btn-primary">Submit recipe</button>
+    </form>
+</div>
